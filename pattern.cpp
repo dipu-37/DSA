@@ -76,6 +76,11 @@ void pattern12(int n)
         cout << endl;
         space -= 2;
     }
+// 1        1
+// 12      21
+// 123    321
+// 1234  4321
+// 1234554321
 }
 
 int main()
