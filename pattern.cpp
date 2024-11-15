@@ -82,29 +82,48 @@ void pattern12(int n)
     // 1234  4321
     // 1234554321
 }
-void pattern13(int n)
+
+void pattern14(int N)
+
 {
+    
+      // Outer loop for the number of rows.
+      for(int i=0;i<N;i++){
+          
+          // Inner loop will loop for i times and
+          // print alphabets from A to A + i.
+          for(char ch = 'A'; ch<='A'+i;ch++){
+              cout<<ch<<" ";
+              
+          }
+          // As soon as the letters for each iteration are printed, we move to the
+          // next row and give a line break otherwise all letters
+          // would get printed in 1 line.
+          cout<<endl;
+          
+      }
+}
 
-    int start = 1;
-
-    for (int i = 1; i <= n; i++)
-    {
-        
-
-        for (int j = 1; j <= i; j++)
-        {
-            cout << start <<" ";
-            start ++;
-        }
-        cout<<endl;
-    }
-
-//     5
-// 1 
-// 2 3
-// 4 5 6
-// 7 8 9 10
-// 11 12 13 14 15
+void pattern16(int N)
+{
+    
+      // Outer loop for the number of rows.
+      for(int i=0;i<N;i++){
+          
+          // Defining character for each row.
+          char ch = 'A'+i;
+          for(int j=0;j<=i;j++){
+              
+              // same char is to be printed i times in that row.
+              cout<<ch<<" ";
+              
+          }
+          // As soon as the letters for each iteration are printed, we move to the
+          // next row and give a line break otherwise all letters
+          // would get printed in 1 line.
+          cout<<endl;
+          
+      }
 }
 
 int main()
@@ -114,5 +133,5 @@ int main()
     int n;
     cin >> n;
 
-    pattern13(n);
+    pattern14(n);
 }
