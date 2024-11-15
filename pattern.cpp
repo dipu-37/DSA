@@ -1,12 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+
+void pattern(int n)
 {
-
-    // code write here
-    int n;
-    cin >> n;
-
     for (int i = 0; i < 2 * n; i++)
     {
         int start = i;
@@ -17,17 +13,27 @@ int main()
             cout << "*";
         }
         cout << endl;
+
+        // follow this input and output
+        // 5
+
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        // ****
+        // ***
+        // **
+        // *
     }
+}
+int main()
+{
 
-    // 5
+    // code write here
+    int n;
+    cin >> n;
 
-    // *
-    // **
-    // ***
-    // ****
-    // *****
-    // ****
-    // ***
-    // **
-    // *
+    pattern(n);
 }
