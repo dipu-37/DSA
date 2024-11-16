@@ -167,21 +167,68 @@ void pattern18(int n)
     for (int i = 0; i < n; i++)
     {
 
-        for (char ch= ('A'+n-1)-i; ch<=('A'+n-1);ch++)
+        for (char ch = ('A' + n - 1) - i; ch <= ('A' + n - 1); ch++)
         {
 
-            cout << ch<< " ";
-            
+            cout << ch << " ";
         }
 
         cout << endl;
     }
-//     5
-// E 
-// D E
-// C D E
-// B C D E
-// A B C D E
+    //     5
+    // E
+    // D E
+    // C D E
+    // B C D E
+    // A B C D E
+}
+void pattern19(int n)
+{
+    int space = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        for(int j=1; j<=n-i; j++){
+            cout<<"*";
+        }
+        for(int j=0; j<space; j++){
+            cout<<" ";
+        }
+        for(int j=1; j<=n-i; j++){
+            cout<<"*";
+        }
+        space +=2;
+
+        cout << endl;
+    }
+
+    int space2 = 2*n-2;
+    for (int i = 1; i <= n; i++)
+    {
+        for(int j=1; j<= i; j++){
+            cout<<"*";
+        }
+        for(int j=0; j<space2; j++){
+            cout<<" ";
+        }
+        for(int j=1; j<= i; j++){
+            cout<<"*";
+        }
+        space2 -=2;
+
+        cout << endl;
+    }
+    5
+**********
+****   ****
+***      ***
+**         **
+*            *
+*            *
+**         **
+***      ***
+****   ****
+**********
 }
 int main()
 {
@@ -190,5 +237,5 @@ int main()
     int n;
     cin >> n;
 
-    pattern18(n);
+    pattern19(n);
 }
