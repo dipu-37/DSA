@@ -2,6 +2,7 @@
 
 
 {
+    //pattern :
     // 1 2 3 4 5 -- -- -- >  i = (n - i)
     // 0 2 4 8 -----> 2*i = 2*n -(2*i)
     // 1 3 5 7 9 -- -- -- >  2 *i + 1 = 2 * n - (2 * i + 1)
@@ -27,6 +28,12 @@
     // (n != 0) = negative + posative ;  (n > 0) = only postive 
     // palindorm = (original == reverse)
     // armstrong = (original == sum of digit cube) 1^3 + 2^3 + 3^3
+    // sqrt(n) == i*i<=n
+    // divisor :  if(n%i==0){ i ; if(n/i != i) n/i }
+    // prime_number  = more than two divisor;
+    // GCD : __gcd(a,b); LCM : a*b / gcd(a,b);
+
+    //recurtion :
 
 
 }
