@@ -130,27 +130,59 @@ void pattern17(int n)
 
     for (int i = 0; i < n; i++)
     {
-       // char ch = 'A'+i;
-        for(int j=0; j<n-i ; j++){
-            cout<<" ";
+        // char ch = 'A'+i;
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << " ";
         }
 
-        char ch= 'A';
-        int breakpoint = (2*i+1)/2;
+        char ch = 'A';
+        int breakpoint = (2 * i + 1) / 2;
 
-        for(int j=1; j<=2*i+1 ; j++){
-           
-             cout<<ch;
-             if(j<=breakpoint) ch++;
-             else ch--;
+        for (int j = 1; j <= 2 * i + 1; j++)
+        {
+
+            cout << ch;
+            if (j <= breakpoint)
+                ch++;
+            else
+                ch--;
         }
-        for(int j=0; j<n-i ; j++){
-            cout<<" ";
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
+    //      A
+    //     ABA
+    //    ABCBA
+    //   ABCDCBA
+    //  ABCDEDCBA
 }
 
+void pattern18(int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+
+        for (char ch= ('A'+n-1)-i; ch<=('A'+n-1);ch++)
+        {
+
+            cout << ch<< " ";
+            
+        }
+
+        cout << endl;
+    }
+//     5
+// E 
+// D E
+// C D E
+// B C D E
+// A B C D E
+}
 int main()
 {
 
@@ -158,5 +190,5 @@ int main()
     int n;
     cin >> n;
 
-    pattern17(n);
+    pattern18(n);
 }
