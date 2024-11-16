@@ -86,44 +86,69 @@ void pattern12(int n)
 void pattern14(int N)
 
 {
-    
-      // Outer loop for the number of rows.
-      for(int i=0;i<N;i++){
-          
-          // Inner loop will loop for i times and
-          // print alphabets from A to A + i.
-          for(char ch = 'A'; ch<='A'+i;ch++){
-              cout<<ch<<" ";
-              
-          }
-          // As soon as the letters for each iteration are printed, we move to the
-          // next row and give a line break otherwise all letters
-          // would get printed in 1 line.
-          cout<<endl;
-          
-      }
+
+    // Outer loop for the number of rows.
+    for (int i = 0; i < N; i++)
+    {
+
+        // Inner loop will loop for i times and
+        // print alphabets from A to A + i.
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << ch << " ";
+        }
+        // As soon as the letters for each iteration are printed, we move to the
+        // next row and give a line break otherwise all letters
+        // would get printed in 1 line.
+        cout << endl;
+    }
 }
 
 void pattern16(int N)
 {
-    
-      // Outer loop for the number of rows.
-      for(int i=0;i<N;i++){
-          
-          // Defining character for each row.
-          char ch = 'A'+i;
-          for(int j=0;j<=i;j++){
-              
-              // same char is to be printed i times in that row.
-              cout<<ch<<" ";
-              
-          }
-          // As soon as the letters for each iteration are printed, we move to the
-          // next row and give a line break otherwise all letters
-          // would get printed in 1 line.
-          cout<<endl;
-          
-      }
+
+    // Outer loop for the number of rows.
+    for (int i = 0; i < N; i++)
+    {
+
+        // Defining character for each row.
+        char ch = 'A' + i;
+        for (int j = 0; j <= i; j++)
+        {
+
+            // same char is to be printed i times in that row.
+            cout << ch << " ";
+        }
+        // As soon as the letters for each iteration are printed, we move to the
+        // next row and give a line break otherwise all letters
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+void pattern17(int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+       // char ch = 'A'+i;
+        for(int j=0; j<n-i ; j++){
+            cout<<" ";
+        }
+
+        char ch= 'A';
+        int breakpoint = (2*i+1)/2;
+
+        for(int j=1; j<=2*i+1 ; j++){
+           
+             cout<<ch;
+             if(j<=breakpoint) ch++;
+             else ch--;
+        }
+        for(int j=0; j<n-i ; j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
 }
 
 int main()
@@ -133,5 +158,5 @@ int main()
     int n;
     cin >> n;
 
-    pattern14(n);
+    pattern17(n);
 }
