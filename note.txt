@@ -1,0 +1,15 @@
+// array related note
+
+1.last valid index in array == n-1
+
+2.mirror index in array
+    1. i == n-1-i           for all index
+    2. 2i == (n-1)-2i       for even index only
+    3. 2i+1 == (n-1)-2i+1   for only odd index
+
+3.while(condition) base on two pointer
+    1.while(i<=j) i==j      work or operation perform
+    1.while(i<j) i==j       no work perform
+    2.while(i<n && j<m)     comparison of two array
+
+4.
