@@ -27,41 +27,71 @@ public:
 
 Node *arrToDLL(vector<int> &arr)
 {
-    Node* head = new Node(arr[0]);
-    Node* mover= head;
+    Node *head = new Node(arr[0]);
+    Node *mover = head;
 
-    for(int i=1;i<arr.size();i++){
-        Node* temp = new Node(arr[i],nullptr,mover);
+    for (int i = 1; i < arr.size(); i++)
+    {
+        Node *temp = new Node(arr[i], nullptr, mover);
         mover->next = temp;
         mover = temp;
     }
     return head;
 }
 
-Node* print(Node* head){
-    Node* temp = head;
-    while (temp!= NULL)
+Node *print(Node *head)
+{
+    Node *temp = head;
+    while (temp != NULL)
     {
-       cout<<temp->data<<" ";
-       temp= temp->next;
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
 
 // delete head in a DLL
-Node* deleteHead(Node* head){
-    if(head == NULL || head->next ==NULL) return NULL;
-    Node* prev = head;
+Node *deleteHead(Node *head)
+{
+    if (head == NULL || head->next == NULL)
+        return NULL;
+    Node *prev = head;
     head = head->next;
     head->back = nullptr;
     delete prev;
     return head;
 }
 
+// delete tail in a DLL
+Node *deleteTail(Node *head)
+{
+    if (head == NULL || head->next == NULL)
+        return NULL;
+    Node *temp = head;
+    // while (temp->next->next != NULL)
+    // {
+    //     temp= temp->next;
+    // }
+    // temp->next = nullptr;
+    // delete temp->next;
+    // return head; 
+
+    while (temp->next!=NULL)
+    {
+        temp = temp->next;
+    }
+    Node* prev = temp->back;
+    prev->next= nullptr;
+    delete temp;
+    return head;
+    
+}
+
 int main()
 {
-    vector<int> arr = {10, 20, 30, 40, 50, 60};
-    Node* head = arrToDLL(arr);
+    vector<int> arr = {10, 20, 30, 40, 50, 60,70};
+    Node *head = arrToDLL(arr);
     head = deleteHead(head);
+    head = deleteTail(head);
     print(head);
 }
