@@ -74,24 +74,86 @@ Node *deleteTail(Node *head)
     // }
     // temp->next = nullptr;
     // delete temp->next;
-    // return head; 
+    // return head;
 
-    while (temp->next!=NULL)
+    while (temp->next != NULL)
     {
         temp = temp->next;
     }
-    Node* prev = temp->back;
-    prev->next= nullptr;
+    Node *prev = temp->back;
+    prev->next = nullptr;
     delete temp;
     return head;
-    
 }
 
+// remove kth element in dll
+
+Node *removeKth(Node *head, int k)
+{
+    Node *temp = head;
+    int cnt = 0;
+    while (temp != NULL)
+    {
+        cnt++;
+        if (cnt == k)
+            break;
+        temp = temp->next;
+    }
+    Node *prev = temp->back;
+    Node *font = temp->next;
+    if (prev == NULL && font == NULL)
+        return NULL;
+    if (prev == NULL)
+    {
+        deleteHead(head);
+    }
+    else if (font == NULL)
+    {
+        deleteTail(head);
+    }
+    prev->next = font;
+    font->back = prev;
+    temp->next = nullptr;
+    temp->back = nullptr;
+    delete temp;
+    return head;
+}
+
+Node *removeNode(Node *head, int val)
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data==val)
+            break;
+        temp = temp->next;
+    }
+    Node *prev = temp->back;
+    Node *font = temp->next;
+    if (prev == NULL && font == NULL)
+        return NULL;
+    if (prev == NULL)
+    {
+        deleteHead(head);
+    }
+    else if (font == NULL)
+    {
+        deleteTail(head);
+    }
+    prev->next = font;
+    font->back = prev;
+    temp->next = nullptr;
+    temp->back = nullptr;
+    delete temp;
+    return head;
+}
 int main()
 {
-    vector<int> arr = {10, 20, 30, 40, 50, 60,70};
+    vector<int> arr = {10, 20, 30, 40, 50, 60, 70};
     Node *head = arrToDLL(arr);
-    head = deleteHead(head);
-    head = deleteTail(head);
+    // head = deleteHead(head);
+    // head = deleteTail(head);
+    //head = removeKth(head, 4);
+    head = removeNode(head,60);
     print(head);
 }
