@@ -28,12 +28,17 @@ int main()
 
     // kth time right rotate
     int tempp[n];
-    for(int i=0;i<n;i++){
-        int newIndx = (n+k+i)%n;
-        tempp[newIndx]=arr[i];
-    }
-    
     for (int i = 0; i < n; i++)
-        cout << temp[i] << " ";
+    {
+        int newIndx = (n + k + i) % n;
+        tempp[newIndx] = arr[i];
+    }
+
+    // for (int i = 0; i < n; i++)
+    //     cout << temp[i] << " ";
+    // cout<<endl;
+
+    for (int i = 0; i < n; i++)
+        cout << tempp[i] << " ";
     return 0;
 }
