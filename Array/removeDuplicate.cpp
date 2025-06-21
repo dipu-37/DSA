@@ -8,6 +8,8 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
         cin >> arr[i];
+
+    // type - 01; 
     vector<int> temp;
     for (int i = 0; i < n - 1; i++)
     {
@@ -19,7 +21,7 @@ int main()
     }
     temp.push_back(arr[n - 1]);
 
-    // type - 02
+    // type - 02;
     int i = 0;
     for (int j = 1; j < n; j++)
     {
