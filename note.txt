@@ -45,3 +45,12 @@ arr[10^6] globally = arr[10^7]
     divisor :  if(n%i==0){ i ; if(n/i != i) n/i }
     prime_number  = more than two divisor;
     GCD : __gcd(a,b); LCM : a*b / gcd(a,b);
+
+9. j = 0 + for i + if(condition) :
+   int j=0;  ---> new index here the target insert
+   for(int i=1;i<n;i++){
+    if(condition){
+        // TO DO
+        j++:
+    }
+   }
