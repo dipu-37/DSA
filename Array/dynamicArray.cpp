@@ -22,5 +22,7 @@ int main()
         cout << brr[i] << " ";
     }
 
+    
+
     return 0;
 }
