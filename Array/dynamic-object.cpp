@@ -28,5 +28,7 @@ int main()
     obj->print();
     fun(obj);
     obj->print();
+    delete obj;
+    cout<<sizeof(obj)<<endl;
     return 0;
 }
