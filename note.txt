@@ -15,9 +15,33 @@ arr[10^6] globally = arr[10^7]
     2.while(i<n && j<m)     comparison of two array
 
 4. if(arr[i]!=arr[i+1])   --->
-   group end index = arr[i] 
-   group ending, boundary, or compression
+    group end index = arr[i] 
+    group ending, boundary, or compression
 
 5. rotate an array (mind over write)
-   left = (n-k+i)%n;
-   right = (n+k+i)%n;
+    left = (n-k+i)%n;
+    right = (n+k+i)%n;
+
+6. flip :
+    start = 1;
+    start = 1- start
+
+7.char :  A B C D E ...Z
+    'A'+1 ='A';
+    'A'+2 ='B';
+    'A'+3 ='C'
+    'A'+i = 'z'  // loop finish after 'z'
+    'A'+i = 'A' + (n-i)  : A B C D E F
+
+8.digit :
+    1234 % 10 = always give last_digit(4);
+    1234 / 10 = always remove last_digit;
+    reverse = reverse *10 + last_digit;   123=321
+    count_digit = (int) (log10(n)+1)
+    (n != 0) = negative + posative ;  (n > 0) = only posative
+    palindorm = (original == reverse)
+    armstrong = (original == sum of digit cube) 1^3 + 2^3 + 3^3
+    sqrt(n) == i*i<=n
+    divisor :  if(n%i==0){ i ; if(n/i != i) n/i }
+    prime_number  = more than two divisor;
+    GCD : __gcd(a,b); LCM : a*b / gcd(a,b);
