@@ -32,3 +32,5 @@ int main()
     cout<<sizeof(obj)<<endl;
     return 0;
 }
+
+// pointer size = 4 byte;

@@ -33,7 +33,12 @@ arr[10^6] globally = arr[10^7]
     'A'+i = 'z'  // loop finish after 'z'
     'A'+i = 'A' + (n-i)  : A B C D E F
 
-8.digit :
+8. frq count:
+    cnt[str[i]-'a']++;
+    cnt[ch-'a']++;  //  if ch = d; cnt[3]++;  3 --> 120 
+    print(cnt[i]) ---> 120;
+
+9.digit :
     1234 % 10 = always give last_digit(4);
     1234 / 10 = always remove last_digit;
     reverse = reverse *10 + last_digit;   123=321
@@ -46,7 +51,7 @@ arr[10^6] globally = arr[10^7]
     prime_number  = more than two divisor;
     GCD : __gcd(a,b); LCM : a*b / gcd(a,b);
 
-9. j = 0 + for i + if(condition) :
+10. j = 0 + for i + if(condition) :
    int j=0;  ---> new index here the target insert
    for(int i=1;i<n;i++){
     if(condition){
