@@ -41,6 +41,7 @@ arr[10^6] globally = arr[10^7]
 9. ASCII SUM of string
    int sum+=s[i]  // 97+98....
    char ch = (char)sum
+   to_string(i);
 
 10.digit :
     1234 % 10 = always give last_digit(4);
