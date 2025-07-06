@@ -64,3 +64,16 @@ arr[10^6] globally = arr[10^7]
         j++:
     }
    }
+
+   12. middle element of 2d matrix = arr[n/2][n/2]
+     primary diagonal i==j 
+     secondary diagonal  i+j = n-1
+
+13. string :
+
+   tolower(ch);
+   toupper(ch);
+   isalnum(ch);
+
+   firstInd = str.find("abr");   // while(str.size()>0 && str.find("abr")<str.size())
+   str.erase(firstInd,endInx)
