@@ -2,7 +2,6 @@
 using namespace std;
 bool isFrqSame(int frq1[], int frq2[])
 {
-
     for (int i = 0; i < 26; i++)
     {
         if (frq1[i] != frq2[i])
@@ -42,7 +41,7 @@ int main()
         //     frq2[s2[i + j] - 'a']++;
         // }
 
-       // int frq2[26] = {0};
+        // int frq2[26] = {0};
 
         int windowInx = 0;
         int inx = i;
