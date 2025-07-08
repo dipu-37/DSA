@@ -9,6 +9,7 @@ int main()
     int n = sentence.size();
     for (int i = 0; i < n; i++)
     {
+        if(sentence[i]==' ') continue;
         string word = "";
         while (i < n && sentence[i] != ' ')
         {

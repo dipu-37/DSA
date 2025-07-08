@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isAlphaNumNumber(char ch){
- if(ch>='0' && ch<='9' || ch>='a'&&ch<='z' || ch>='A'&& ch<='Z') return true;
- return false;
+bool isAlphaNumNumber(char ch)
+{
+    if (ch >= '0' && ch <= '9' || ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
+        return true;
+    return false;
 }
 int main()
 {
@@ -24,7 +26,7 @@ int main()
             end--;
             continue;
         }
-        
+
         if (tolower(str[start]) != tolower(str[end]))
         {
             flag = false;
@@ -32,9 +34,12 @@ int main()
         start++;
         end--;
     }
-    if(flag){
-        cout<<"palindrom";
-    }else{
-        cout<<"not palindrom";
+    if (flag)
+    {
+        cout << "palindrome";
+    }
+    else
+    {
+        cout << "not palindrome";
     }
 }

@@ -45,52 +45,58 @@ Node *createArrayToLL(vector<int> &arr)
     return head;
 }
 
-int countTotal(Node *head)
+Node *detectLoop(Node *head)
 {
-    int cnt = 0;
     Node *temp = head;
+    map<Node *, int> mpp;
     while (temp != NULL)
     {
-        cnt++;
-        temp = temp->next;
-    }
-    return cnt;
-}
-
-Node *findMiddle(int cntTotal, Node *head)
-{
-    if (head == NULL || cntTotal == 0)
-        return NULL;
-    Node *temp = head;
-    int midNode = (cntTotal / 2) + 1;
-    while (temp != NULL)
-    {
-        midNode--;
-        if (midNode == 0)
+        if (mpp.find(temp) != mpp.end())
         {
-            break;
+            return temp;
         }
+        mpp[temp] = 1;
         temp = temp->next;
     }
-    return temp;
+    return nullptr;
 
     // Node *slow = head;
     // Node *fast = head;
     // while (fast != NULL && fast->next != NULL)
     // {
     //     slow = slow->next;
-    //     fast= fast->next->next;
+    //     fast = fast->next->next;
+    //     if(slow == fast){
+    //         return true;
+    //     }
     // }
-    // return slow;
+    // return false;
 }
 
 int main()
 {
-    vector<int> arr = {10, 20, 30, 40, 50};
-    Node *head = createArrayToLL(arr);
-    print(head);
-    int cntTotal = countTotal(head);
-    cout << cntTotal << endl;
-    Node *middle = findMiddle(cntTotal, head);
-    cout << middle->data << endl;
+    // vector<int> arr = {10, 20, 30, 40, 50, 20};
+    // Node *head = createArrayToLL(arr);
+    // print(head);
+    Node *head = new Node(1);
+    Node *second = new Node(2);
+    Node *third = new Node(3);
+    Node *fourth = new Node(4);
+    Node *fifth = new Node(5);
+
+    head->next = second;
+    second->next = third;
+    third->next = fourth;
+    fourth->next = fifth;
+    fifth->next = third;
+
+    Node *loop = detectLoop(head);
+    if (loop == nullptr)
+    {
+        cout << "no loop";
+    }
+    else
+    {
+        cout << "loop";
+    }
 }

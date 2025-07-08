@@ -37,6 +37,7 @@ arr[10^6] globally = arr[10^7]
     cnt[str[i]-'a']++;
     cnt[ch-'a']++;  //  if ch = d; cnt[3]++;  3 --> 120 
     print(cnt[i]) ---> 120;
+    char(i+'a'); --- char 
 
 9. ASCII SUM of string
    int sum+=s[i]  // 97+98....
@@ -77,3 +78,10 @@ arr[10^6] globally = arr[10^7]
 
    firstInd = str.find("abr");   // while(str.size()>0 && str.find("abr")<str.size())
    str.erase(firstInd,endInx)
+
+14. linkList :
+
+    i++ ---> temp = temp->next;
+    i=i+2 ---> temp= temp->next->next;
+    temp!=NULL ---> point (NULL)
+    temp->next!=NULL ----> 10 20 30 40 NULL   ( it point 40)
