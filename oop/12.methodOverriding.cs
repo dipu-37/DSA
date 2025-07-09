@@ -67,3 +67,4 @@ class Test
 // ✅ একই signature
 // ✅ Runtime polymorphism support করে
 // ✅ Constructor override হয় না
+// ✅ constructor chaining - base keyword
