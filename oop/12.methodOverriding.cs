@@ -62,3 +62,8 @@ class Test
 3. same name, same signature
 */
 
+// ✅ Base class → virtual
+// ✅ Derived class → override
+// ✅ একই signature
+// ✅ Runtime polymorphism support করে
+// ✅ Constructor override হয় না
