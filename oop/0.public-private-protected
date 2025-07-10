@@ -1,0 +1,8 @@
+
+public - any class
+private - only within the same class
+protected - same class + drive class 
+        class A { }
+        class B : A { }
+        class C : B { }   // Multilevel inheritance: C → B → A
+    Multilevel a protected can work;

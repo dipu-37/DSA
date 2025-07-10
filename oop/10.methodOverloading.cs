@@ -44,6 +44,9 @@ class Test
 1. parameter list diff 
 2. parameter type
 3. no of parameter 
+4. Polymorphism (many forms) হলেও এটা compile time-এ ঠিক হয়ে যায়(which method is called)।
+5. Method Overloading → Compile Time Polymorphism →Static Binding, Fast,early but Fixed
+6. Method Overriding → Runtime Polymorphism → Dynamic,late and Powerful
 
 */
 

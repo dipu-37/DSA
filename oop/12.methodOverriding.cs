@@ -60,6 +60,10 @@ class Test
 1. Proper overriding, runtime polymorphism
 2. Runtime polymorphism = virtual + override
 3. same name, same signature
+4. Polymorphism (many forms) হলেও এটা run time-এ ঠিক হয়ে যায়(which method is called)।
+5. Method Overloading → Compile Time Polymorphism →Static Binding, Fast,early but Fixed
+6. Method Overriding → Runtime Polymorphism → Dynamic,late and Powerful
+7. virtual - allow to override
 */
 
 // ✅ Base class → virtual
@@ -68,3 +72,4 @@ class Test
 // ✅ Runtime polymorphism support করে
 // ✅ Constructor override হয় না
 // ✅ constructor chaining - base keyword
+

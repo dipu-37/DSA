@@ -65,6 +65,7 @@ constructor :
  2.no return type
  3.object initialization 
  4.constructor overloading  = Yes
+ 5. ❌ Constructor কখনো override হয় না।
 */
 
 
