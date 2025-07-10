@@ -1,0 +1,21 @@
+
+abstraction:
+1.abstract class -(0 - 100 % abstract)
+     - no obj create;
+     - ref variable create (Base class) --> ref to Drive class;
+     - abstract class ---> abstract keyword;
+     - abstract method ---> abstract keyword; no body;  must be override ;
+     - abstract + non abstract method;
+     - not support multiple inheritance
+     - constructor 
+     - abstract method end at semecolon; abstract void A();
+2.interface (100% abstract) - collection of abstract method
+     - 100% abstract 
+     - support multiple inheritance
+     - no constructor
+     -যেই class implement করবে → সব method override করতে বাধ্য
+     -Interface-এর object তৈরি হয় না
+
+class - class = extends
+interface - interface = extends
+interface - class = implements
