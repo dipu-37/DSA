@@ -85,3 +85,20 @@ arr[10^6] globally = arr[10^7]
     i=i+2 ---> temp= temp->next->next;
     temp!=NULL ---> point (NULL)
     temp->next!=NULL ----> 10 20 30 40 NULL   ( it point 40)
+
+15. word count : Hello World
+
+// space skip only ------->
+     if(str[i]!=' '){
+            cout<<str[i];  
+        }else{
+            // after -- Hello
+        }
+// word count --->
+    string word = "";
+    while (i < s.size() && s[i] != ' ')
+    {
+    word += s[i];
+    i++;
+    }
+    

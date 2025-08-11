@@ -1,5 +1,5 @@
 
-abstraction:
+abstraction: low coupling
 1.abstract class -(0 - 100 % abstract)
      - no obj create;
      - ref variable create (Base class) --> ref to Drive class;
