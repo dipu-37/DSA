@@ -76,6 +76,18 @@ public class NotificationContext
     }
 }
 
+// voilation of interface segregation principle
+public class PushNotification : Inotification{
+    public void Send(){
+        Console.WriteLine("Push Send");
+    }
+    public void Log(){
+        Console.WriteLine("Push Log");
+    }
+    public void Save(){
+      // no need to implement this method
+    }
+}
 
 
 class Program

@@ -50,3 +50,19 @@ class Program
         Console.WriteLine("Hello World");
     }
 }
+
+
+/*
+    আগে Student ক্লাসে অনেক দায়িত্ব ছিল (Student Info, Add, Course Enroll, Payment, Notification)।
+
+    আলাদা আলাদা ক্লাস (Payment, Notification, Courese, Student) তৈরি করেছেন।
+    Payment → শুধু টিউশন ফি দেয়
+
+    Notification → শুধু নোটিফিকেশন পাঠায়
+
+    Course → শুধু কোর্স এনরোল করে
+
+    Student → শুধু ছাত্র সম্পর্কিত কাজ করে
+
+    এভাবে করলে SRP মেনে চলে ✅
+*/
